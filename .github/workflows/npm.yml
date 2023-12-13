@@ -11,7 +11,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - run: |
-        npm init -y
-        npm install @lexical @lexical/react
-        ls node_modules | wc -l
+          npm init -y
+          npm install @lexical @lexical/react
+          ls node_modules | wc -l
 
