@@ -1,0 +1,17 @@
+name: build
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: |
+        npm init -y
+        npm install @lexical @lexical/react
+        ls node_modules | wc -l
+
